@@ -50,6 +50,8 @@ public class CriarAcesso {
 	    String urlpagina = driver.getCurrentUrl();
 	    
 	    assertEquals(urlpagina, "http://practice.automationtesting.in/my-account/");
+	    
+	    driver.close();
 	}
 
 	
@@ -71,6 +73,8 @@ public class CriarAcesso {
 		String mensagem = driver.findElement(By.xpath("//*[@id=\"page-36\"]/div/div[1]/ul/li/strong")).getText();
 		
 		assertEquals(mensagem, "Error:");
+		
+		driver.close();
 	}
 
 

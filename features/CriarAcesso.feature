@@ -15,10 +15,10 @@ Esquema do Cenário: Cadastrar usuário com sucesso
 	
 Exemplos: 
 
-|       email        |   senha    |
-| "Poyki@teste.com"  | "4-Qyr)&W" |
-| "Lublin@teste.com"  | "%gnti0k:" |
-| "Unra@teste.com"  | "4-Qyr)&W" |
+|       email         |   senha    |
+| "Suzan@teste.com"   | "4-Qyr)&W" |
+| "Tiopuho@teste.com" | "%gnti0k:" |
+| "Esbir@teste.com"   | "4-Qyr)&W" |
 
 
 Cenário: Validação dos campos obrigatórios
