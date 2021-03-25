@@ -1,9 +1,13 @@
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
@@ -51,6 +55,16 @@ public class CriarAcesso {
 	    
 	    assertEquals(urlpagina, "http://practice.automationtesting.in/my-account/");
 	    
+	    try {
+			
+			File evidencia = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(evidencia, new File("C:\\Users\\Suporte\\Documents\\Projeto\\Praticando\\ProjetoPrat02\\evidências\\Validação de cadastro com sucesso.png"));
+			
+			}
+			catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+	    
 	    driver.close();
 	}
 
@@ -74,9 +88,17 @@ public class CriarAcesso {
 		
 		assertEquals(mensagem, "Error:");
 		
+		try {
+		
+		File evidencia = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(evidencia, new File("C:\\Users\\Suporte\\Documents\\Projeto\\Praticando\\ProjetoPrat02\\evidências\\Validação de campo obrigatório.png"));
+		
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		driver.close();
-	}
-
-
+		}
+		
 
 }
